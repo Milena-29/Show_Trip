@@ -327,3 +327,385 @@ a {
         width: 100%;
     }
 }
+
+/*---------TELA INICIAL---------*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f4fa;
+    color: #29265f;
+}
+
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: linear-gradient(160deg, #202052, #4233a1);
+    color: white;
+    padding: 25px 12px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 100px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    background: #7064ed;
+    padding: 12px;
+    border-radius: 7px;
+    font-size: 13px;
+}
+
+.sidebar a:hover {
+    background: #5841e6;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    text-align: center;
+    font-size: 11px;
+}
+
+.sidebar-bottom p {
+    margin-top: 6px;
+}
+
+main {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.topbar input {
+    width: 400px;
+    max-width: 65%;
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.profile span {
+    background: #ddd;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.profile small {
+    display: block;
+    color: #999;
+    margin-top: 3px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 0.8fr;
+    gap: 13px;
+}
+
+.card, .hero {
+    background: white;
+    padding: 13px;
+    border-radius: 8px;
+    min-width: 0;
+}
+
+.card h3 {
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.hero {
+    grid-column: 1;
+    min-height: 190px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #17132eaa, #17132e44),
+    url("https://www.sintpq.org.br/arquivos/2024/nandoreis.jpg?1734624587990") center/cover;
+}
+
+.hero span {
+    font-size: 11px;
+}
+
+.hero h1 {
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.hero p {
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.hero button {
+    background: #6548ed;
+    color: white;
+    border: 0;
+    padding: 9px 15px;
+    border-radius: 20px;
+    width: fit-content;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.ticket {
+    grid-column: 2 / 4;
+    text-align: center;
+    
+}
+
+.qr {
+    font-size: 75px;
+    margin: 5px;
+    color: black;
+}
+
+.qr img{
+    width: 140px;
+    height: 140px;
+}
+
+.ticket p {
+    font-size: 10px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.discount {
+    background: #f0edff;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 10px;
+    color: #6855e8;
+}
+
+.discount p {
+    margin-top: 5px;
+}
+
+.upcoming {
+    grid-column: 1;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #eee;
+    padding: 6px;
+    margin-bottom: 7px;
+    border-radius: 6px;
+}
+
+.event img {
+    width: 55px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.event strong {
+    font-size: 11px;
+}
+
+.event p, .event small {
+    font-size: 9px;
+    color: #999;
+    margin-top: 4px;
+}
+
+.route {
+    grid-column: 2 / 4;
+}
+
+#mapa {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.restaurants {
+    grid-column: 1;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.items article {
+    border: 1px solid #eee;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.items img {
+    width: 100%;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.items strong {
+    display: block;
+    font-size: 9px;
+    margin: 5px 0;
+}
+
+.items p {
+    color: #e9c83b;
+    font-size: 9px;
+}
+
+.items small {
+    display: block;
+    font-size: 8px;
+    color: #6855e8;
+    margin-top: 5px;
+}
+
+.hotels {
+    grid-column: 2;
+}
+
+.hotel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 9px;
+    font-size: 9px;
+}
+
+.hotel img {
+    width: 65px;
+    height: 42px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.coupons {
+    grid-column: 3;
+}
+
+.coupon {
+    background: #f1efff;
+    padding: 10px 7px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-size: 9px;
+    color: #5944d8;
+}
+
+.coupon p {
+    color: #999;
+    margin-top: 4px;
+    font-size: 8px;
+}
+
+@media (max-width: 1000px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero, .upcoming, .restaurants {
+        grid-column: 1;
+    }
+
+    .ticket, .route {
+        grid-column: 2;
+    }
+
+    .hotels {
+        grid-column: 1;
+    }
+
+    .coupons {
+        grid-column: 2;
+    }
+}
+
+@media (max-width: 650px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .sidebar h2 {
+        margin-bottom: 20px;
+    }
+
+    .sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 12px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero, .ticket, .upcoming, .route,
+    .restaurants, .hotels, .coupons {
+        grid-column: 1;
+    }
+
+    .topbar input {
+        width: 65%;
+    }
+}
+
+@media (max-width: 380px) {
+    .items {
+        grid-template-columns: 1fr;
+    }
+
+    .items img {
+        height: 130px;
+    }
+}

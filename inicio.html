@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show&Trip | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <h2>Show&Trip</h2>
+
+        <nav>
+            <a href="#dashboard">⌂ Dashboard</a>
+            <a href="#eventos">▣ Eventos</a>
+            <a href="#restaurantes">♨ Restaurantes</a>
+            <a href="#hoteis">▰ Hotéis</a>
+            <a href="#cupons">％ Cupons</a>
+            <a href="#rotas">⌖ Rotas</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <h3>Show&Trip</h3>
+            <p>Mais que um show, uma experiência completa.</p>
+        </div>
+    </aside>
+
+    <main id="dashboard">
+
+        <header class="topbar">
+            <input type="search" placeholder="Buscar shows, artistas, hotéis...">
+            <div class="profile">
+                <span>●</span>
+                <div>
+                    <strong>Ana Júlia</strong>
+                    <small>Turista</small>
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-grid">
+
+            <section class="hero" id="eventos">
+                <span>Show em destaque</span>
+                <h1>Nando Reis</h1>
+                <p>25 de Outubro de 2026 · 20:00</p>
+                <p>SESC Glória · Vitória/ES</p>
+                <button>Comprar ingresso</button>
+            </section>
+
+            <section class="ticket card">
+                <h3>Seu ingresso</h3>
+                <div class="qr">
+                    <img src="img/qrcode.png">
+                </div>
+                <p>25 de Outubro de 2026 · 20:00</p>
+                <p>SESC Glória · Vitória/ES</p>
+                <div class="discount">
+                    <strong>Seus benefícios estão liberados!</strong>
+                    <p>Apresente seu ingresso nos estabelecimentos parceiros.</p>
+                </div>
+            </section>
+
+            <section class="upcoming card">
+                <h3>Próximos shows</h3>
+
+                <div class="event">
+                    <img
+                        src="https://www.otempo.com.br/content/dam/otempo/editorias/entretenimento/2023/10/entretenimento-djavan-djavan-se-apresenta-no-arena-hall-em-belo-horizonte-djavan-traz-sucessos-da-carreira-em-shows-em-belo-horizonte-1708751103.jpeg">
+                    <div><strong>Djavan</strong>
+                        <p>SESC Glória · Vitória/ES</p><small>24/11/2026 · 18:00</small>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <img src="https://www.sintpq.org.br/arquivos/2024/nandoreis.jpg?1734624587990">
+                    <div><strong>Nando Reis</strong>
+                        <p>SESC Glória · Vitória/ES</p><small>25/11/2026 · 20:00</small>
+                    </div>
+                </div>
+
+                <div class="event">
+                    <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYO_qJIyNkE2JPyUhqfwEfcIokqDq9qRu-ozC8zzojwA&s=10">
+                    <div><strong>Jorge Vercillo</strong>
+                        <p>SESC Glória · Vitória/ES</p><small>10/01/2027 · 19:00</small>
+                    </div>
+                </div>
+            </section>
+
+            
