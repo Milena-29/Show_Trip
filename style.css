@@ -1,0 +1,329 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Corpo da página */
+
+body {
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fundo da página */
+
+.PapelLoginCadastro {
+    min-height: 100vh;
+    width: 100%;
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(30, 0, 100, 0.1),
+            rgba(35, 30, 100, 0.7)
+        ),
+        url('img/LeC.png');
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card de login e cadastro */
+
+.cardInfo {
+    min-height: 500px;
+    width: 460px;
+    max-width: 100%;
+    background-color: white;
+    color: #333;
+    border: 1px solid #E6EAF5;
+    border-radius: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+}
+
+/* Ícone */
+
+.Icon {
+    width: 80px;
+    height: 80px;
+    background-image: url('img/Login.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.IconC {
+    width: 80px;
+    height: 80px;
+    background-image: url('img/IconC.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.icone {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 3px;
+    object-fit: contain;
+}
+.campo {
+    position: relative;
+    width: 300px;
+}
+
+.VerSenha {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 2;
+}
+.logo {
+    display: block;
+    width: 15%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 10px;
+}
+/* Título do tipo de usuário */
+
+.tituloTipo {
+    width: 300px;
+    text-align: left;
+    font-size: 13px;
+    color: #3F269D;
+    margin-bottom: 12px;
+}
+
+/* Organização das opções */
+
+.tipoUsuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 12px;
+}
+
+/* Esconde os radios originais */
+
+.tipoUsuario input[type="radio"] {
+    display: none;
+}
+
+/* Aparência dos botões */
+
+.tipoUsuario label {
+    width: 130px;
+    height: 42px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #888;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Ícones */
+
+.tipoUsuario label span {
+    font-size: 20px;
+}
+
+/* Opção selecionada */
+
+.tipoUsuario input[type="radio"]:checked + label {
+    background: linear-gradient(to right, #643BFF, #3C2399);
+    color: white;
+    border-color: transparent;
+}
+
+/* Efeito ao passar o mouse */
+
+.tipoUsuario label:hover {
+    border-color: #643BFF;
+}
+/* Título */
+
+h1 {
+    color: #3F269D;
+    font-size: 30px;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Campos de preenchimento */
+
+.campo {
+    position: relative;
+    width: 300px;
+    max-width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 40px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #5937DB;
+}
+
+/* Checkbox */
+
+.checkbox {
+    width: 300px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.checkbox input {
+    width: 16px;
+    height: 16px;
+    accent-color: #5937DB;
+    flex-shrink: 0;
+}
+
+.checkbox label {
+    font-size: 13px;
+}
+
+.checkbox span {
+    color: #3F269D;
+    display: inline;
+}
+
+/* Tipo de usuário */
+
+.tipoUsuario {
+    width: 300px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.tipoUsuario input {
+    accent-color: #5937DB;
+    cursor: pointer;
+}
+
+.tipoUsuario label {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Links */
+
+a {
+    color: #5937DB;
+}
+
+/* Botão entrar e cadastrar */
+
+.btn-entrar {
+    background: linear-gradient(to right, #643BFF, #3C2399);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 300px;
+    max-width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn-cadastrar {
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 300px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+/* Efeito ao passar o mouse */
+
+.btn-entrar:hover {
+    opacity: 0.9;
+}
+
+.btn-cadastrar:hover {
+    background-color: #f5f3fc;
+}
+
+/* Responsividade */
+
+@media (max-width: 480px) {
+    .cardInfo {
+        padding: 20px 15px;
+        border-radius: 25px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .campo,
+    .checkbox,
+    .tipoUsuario,
+    .btn-entrar,
+    .btn-cadastrar {
+        width: 100%;
+    }
+}

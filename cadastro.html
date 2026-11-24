@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show&Trip: Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="PapelLoginCadastro">
+
+        <div class="cardInfo">
+
+            <div class="IconC"></div>
+
+            <h1>Criar sua conta</h1>
+
+            <p>
+                Acesse eventos, resgate benefícios
+                <br>
+                e explore o melhor da cidade.
+            </p>
+
+            <form id="formCadastro">
+
+                <div class="campo">
+                    <span class="iconeN"></span>
+                    <input type="text" placeholder="Nome Completo" required id="nome">
+                </div>
+
+                <div class="campo">
+                    <span class="iconeE"></span>
+                    <input type="email" placeholder="E-mail" required id="email">
+                </div>
+
+                <div class="campo">
+                    <span class="iconeS"></span>
+                    <input type="tel" placeholder="Telefone" required id="telefone">
+                </div>
+
+                <div class="campo">
+                    <input type="password" placeholder="Senha" required id="senha">
+
+                    <img src="img/EyeOn.png" alt="Mostrar senha" class="VerSenha">
+                </div>
+
+                <div class="campo">
+                    <input type="password" placeholder="Confirmar Senha" required id="confirmarSenha">
+
+                    <img src="img/EyeOn.png" alt="Mostrar senha" class="VerSenha">
+                </div>
+
+                <p class="tituloTipo">Tipo de usuário</p>
+
+                <div class="tipoUsuario">
+
+                    <input type="radio" id="usuario" name="tipoUsuario"
+                        value="usuario" checked>
+
+                    <label for="usuario" class="opcaoTurista">
+                        <img src="img/TuristaAtivo.png" alt="Turista" class="iconeTurista">
+                        Turista
+                    </label>
+
+                    <input type="radio" id="empresa" name="tipoUsuario"
+                        value="empresa">
+
+                    <label for="empresa" class="opcaoParceiro">
+                        <img src="img/ParceiroNaoAtivo.png" alt="Parceiro" class="iconeParceiro">
+                        Parceiro
+                    </label>
+
+                </div>
+
+                <button class="btn-entrar" type="submit" id="cadastrar">
+                    Cadastrar
+                </button>
+
+            </form>
+
+            <p>ou</p>
+
+            <button class="btn-cadastrar" type="button">
+                <img src="img/google.png" alt="Google" class="icone">
+                Cadastrar com o Google
+            </button>
+
+            <p>Já tem conta? <a href="index.html">Fazer login</a></p>
+
+        </div>
+
+        <img src="img/logo.png" alt="Logo" class="logo">
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
