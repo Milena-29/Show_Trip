@@ -21,8 +21,11 @@ a {
 
 
 /* ==================================================
-   2. SIDEBAR - TODAS AS PÁGINAS
+   2. ESTRUTURA UNIVERSAL - TODAS AS TELAS INTERNAS
 ================================================== */
+
+
+/* SIDEBAR */
 
 .sidebar {
     width: 220px;
@@ -72,6 +75,9 @@ a {
     margin-top: 6px;
 }
 
+
+/* LOGO DA SIDEBAR */
+
 .logoMenu img {
     display: block;
     width: 100%;
@@ -101,11 +107,61 @@ a {
 }
 
 
+/* ÁREA PRINCIPAL DAS PÁGINAS INTERNAS */
+
+.sidebar ~ main {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+
+/* BARRA SUPERIOR E PESQUISA */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.topbar input {
+    width: 400px;
+    max-width: 65%;
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+/* PERFIL DO USUÁRIO */
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.profile span {
+    background: #ddd;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.profile small {
+    display: block;
+    color: #999;
+    margin-top: 3px;
+}
+
+
 /* ==================================================
    3. PÁGINAS DE LOGIN E CADASTRO
 ================================================== */
 
-/* Fundo */
+
+/* FUNDO */
 
 .PapelLoginCadastro {
     min-height: 100vh;
@@ -126,7 +182,8 @@ a {
     align-items: center;
 }
 
-/* Card */
+
+/* CARD */
 
 .cardInfo {
     min-height: 500px;
@@ -142,7 +199,8 @@ a {
     padding: 25px;
 }
 
-/* Ícones */
+
+/* ÍCONES */
 
 .Icon {
     width: 80px;
@@ -180,7 +238,8 @@ a {
     margin-top: 10px;
 }
 
-/* Títulos */
+
+/* TÍTULOS */
 
 .PapelLoginCadastro h1 {
     color: #3F269D;
@@ -194,7 +253,8 @@ a {
     margin-top: 10px;
 }
 
-/* Campos */
+
+/* CAMPOS DE PREENCHIMENTO */
 
 .campo {
     position: relative;
@@ -219,7 +279,8 @@ a {
     border-color: #5937DB;
 }
 
-/* Visualizar senha */
+
+/* VISUALIZAR SENHA */
 
 .VerSenha {
     width: 20px;
@@ -233,7 +294,8 @@ a {
     z-index: 2;
 }
 
-/* Checkbox */
+
+/* CHECKBOX */
 
 .checkbox {
     width: 300px;
@@ -261,7 +323,8 @@ a {
     display: inline;
 }
 
-/* Tipo de usuário */
+
+/* TIPO DE USUÁRIO */
 
 .tituloTipo {
     width: 300px;
@@ -315,7 +378,8 @@ a {
     border-color: #643BFF;
 }
 
-/* Botões */
+
+/* BOTÕES */
 
 .btn-entrar {
     background: linear-gradient(to right, #643BFF, #3C2399);
@@ -359,51 +423,8 @@ a {
    4. DASHBOARD - TELA INICIAL
 ================================================== */
 
-/* Área principal */
 
-main {
-    margin-left: 220px;
-    padding: 20px;
-}
-
-/* Barra superior */
-
-.topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-    gap: 15px;
-}
-
-.topbar input {
-    width: 400px;
-    max-width: 65%;
-    padding: 11px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.profile {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 12px;
-}
-
-.profile span {
-    background: #ddd;
-    padding: 10px;
-    border-radius: 50%;
-}
-
-.profile small {
-    display: block;
-    color: #999;
-    margin-top: 3px;
-}
-
-/* Organização dos cards */
+/* ORGANIZAÇÃO DOS CARDS */
 
 .dashboard-grid {
     display: grid;
@@ -424,7 +445,8 @@ main {
     margin-bottom: 12px;
 }
 
-/* Banner principal */
+
+/* BANNER PRINCIPAL */
 
 .hero {
     grid-column: 1;
@@ -464,7 +486,8 @@ main {
     cursor: pointer;
 }
 
-/* Ingressos */
+
+/* INGRESSOS */
 
 .ticket {
     grid-column: 2 / 4;
@@ -500,7 +523,8 @@ main {
     margin-top: 5px;
 }
 
-/* Próximos eventos */
+
+/* PRÓXIMOS EVENTOS */
 
 .upcoming {
     grid-column: 1;
@@ -534,7 +558,8 @@ main {
     margin-top: 4px;
 }
 
-/* Rotas e mapa */
+
+/* ROTAS E MAPA */
 
 .route {
     grid-column: 2 / 4;
@@ -547,7 +572,8 @@ main {
     z-index: 1;
 }
 
-/* Restaurantes */
+
+/* RESTAURANTES */
 
 .restaurants {
     grid-column: 1;
@@ -590,7 +616,8 @@ main {
     margin-top: 5px;
 }
 
-/* Hotéis */
+
+/* HOTÉIS */
 
 .hotels {
     grid-column: 2;
@@ -611,7 +638,8 @@ main {
     border-radius: 5px;
 }
 
-/* Cupons */
+
+/* CUPONS */
 
 .coupons {
     grid-column: 3;
@@ -634,7 +662,53 @@ main {
 
 
 /* ==================================================
-   5. RESPONSIVIDADE - LOGIN E CADASTRO
+   5. RESPONSIVIDADE - ESTRUTURA UNIVERSAL
+================================================== */
+
+@media (max-width: 650px) {
+
+    /* SIDEBAR */
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .sidebar h2 {
+        margin-bottom: 20px;
+    }
+
+    .sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    /* ÁREA PRINCIPAL */
+
+    .sidebar ~ main {
+        margin-left: 0;
+        padding: 12px;
+    }
+
+    /* BARRA SUPERIOR */
+
+    .topbar {
+        flex-wrap: wrap;
+    }
+
+    .topbar input {
+        width: 65%;
+    }
+}
+
+
+/* ==================================================
+   6. RESPONSIVIDADE - LOGIN E CADASTRO
 ================================================== */
 
 @media (max-width: 480px) {
@@ -659,7 +733,7 @@ main {
 
 
 /* ==================================================
-   6. RESPONSIVIDADE - DASHBOARD
+   7. RESPONSIVIDADE - DASHBOARD
 ================================================== */
 
 @media (max-width: 1000px) {
@@ -684,34 +758,6 @@ main {
 
 @media (max-width: 650px) {
 
-    /* Sidebar */
-
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
-
-    .sidebar h2 {
-        margin-bottom: 20px;
-    }
-
-    .sidebar nav {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .sidebar-bottom {
-        display: none;
-    }
-
-    /* Conteúdo */
-
-    main {
-        margin-left: 0;
-        padding: 12px;
-    }
-
     .dashboard-grid {
         grid-template-columns: 1fr;
     }
@@ -724,10 +770,6 @@ main {
     .hotels,
     .coupons {
         grid-column: 1;
-    }
-
-    .topbar input {
-        width: 65%;
     }
 }
 
