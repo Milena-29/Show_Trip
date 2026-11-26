@@ -343,6 +343,23 @@ body {
     color: #29265f;
 }
 
+.logoMenu img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+.navegacao {
+    
+}
+
+.navegacao img {
+    width: 25px;
+    height: 25px;
+}
+
 .sidebar {
     width: 220px;
     height: 100vh;
