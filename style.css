@@ -1,25 +1,115 @@
+/* ==================================================
+   1. CONFIGURAÇÕES GERAIS
+================================================== */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    color: inherit;
 }
-
-/* Corpo da página */
 
 body {
-    border: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background: #f5f4fa;
+    color: #29265f;
 }
 
-/* Fundo da página */
+a {
+    color: #5937DB;
+}
+
+
+/* ==================================================
+   2. SIDEBAR - TODAS AS PÁGINAS
+================================================== */
+
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: linear-gradient(160deg, #202052, #4233a1);
+    color: white;
+    padding: 25px 12px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 100px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    background: #7064ed;
+    padding: 12px;
+    border-radius: 7px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar a:hover {
+    background: #5841e6;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    text-align: center;
+    font-size: 11px;
+}
+
+.sidebar-bottom p {
+    margin-top: 6px;
+}
+
+.logoMenu img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: auto;
+}
+
+.logoPrincipal {
+    margin-top: auto;
+    display: flex;
+}
+
+.navegacao {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    width: 100%;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navegacao img {
+    width: 25px;
+    height: 25px;
+}
+
+
+/* ==================================================
+   3. PÁGINAS DE LOGIN E CADASTRO
+================================================== */
+
+/* Fundo */
 
 .PapelLoginCadastro {
     min-height: 100vh;
     width: 100%;
-
     background-image:
         linear-gradient(
             to bottom,
@@ -27,7 +117,6 @@ body {
             rgba(35, 30, 100, 0.7)
         ),
         url('img/LeC.png');
-
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -37,7 +126,7 @@ body {
     align-items: center;
 }
 
-/* Card de login e cadastro */
+/* Card */
 
 .cardInfo {
     min-height: 500px;
@@ -53,7 +142,7 @@ body {
     padding: 25px;
 }
 
-/* Ícone */
+/* Ícones */
 
 .Icon {
     width: 80px;
@@ -82,10 +171,55 @@ body {
     padding: 3px;
     object-fit: contain;
 }
+
+.logo {
+    display: block;
+    width: 15%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+/* Títulos */
+
+.PapelLoginCadastro h1 {
+    color: #3F269D;
+    font-size: 30px;
+    text-align: center;
+}
+
+.PapelLoginCadastro p {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Campos */
+
 .campo {
     position: relative;
     width: 300px;
+    max-width: 100%;
 }
+
+.PapelLoginCadastro input[type="text"],
+.PapelLoginCadastro input[type="email"],
+.PapelLoginCadastro input[type="password"],
+.PapelLoginCadastro input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 40px;
+    outline: none;
+}
+
+.PapelLoginCadastro input:focus {
+    border-color: #5937DB;
+}
+
+/* Visualizar senha */
 
 .VerSenha {
     width: 20px;
@@ -97,117 +231,6 @@ body {
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 2;
-}
-.logo {
-    display: block;
-    width: 15%;
-    height: auto;
-    object-fit: contain;
-    margin-top: 10px;
-}
-/* Título do tipo de usuário */
-
-.tituloTipo {
-    width: 300px;
-    text-align: left;
-    font-size: 13px;
-    color: #3F269D;
-    margin-bottom: 12px;
-}
-
-/* Organização das opções */
-
-.tipoUsuario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 12px;
-}
-
-/* Esconde os radios originais */
-
-.tipoUsuario input[type="radio"] {
-    display: none;
-}
-
-/* Aparência dos botões */
-
-.tipoUsuario label {
-    width: 130px;
-    height: 42px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-
-    font-size: 14px;
-    font-weight: bold;
-    color: #888;
-
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/* Ícones */
-
-.tipoUsuario label span {
-    font-size: 20px;
-}
-
-/* Opção selecionada */
-
-.tipoUsuario input[type="radio"]:checked + label {
-    background: linear-gradient(to right, #643BFF, #3C2399);
-    color: white;
-    border-color: transparent;
-}
-
-/* Efeito ao passar o mouse */
-
-.tipoUsuario label:hover {
-    border-color: #643BFF;
-}
-/* Título */
-
-h1 {
-    color: #3F269D;
-    font-size: 30px;
-    text-align: center;
-}
-
-p {
-    font-size: 16px;
-    text-align: center;
-    margin-top: 10px;
-}
-
-/* Campos de preenchimento */
-
-.campo {
-    position: relative;
-    width: 300px;
-    max-width: 100%;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    height: 40px;
-    outline: none;
-}
-
-input:focus {
-    border-color: #5937DB;
 }
 
 /* Checkbox */
@@ -240,33 +263,59 @@ input:focus {
 
 /* Tipo de usuário */
 
+.tituloTipo {
+    width: 300px;
+    text-align: left;
+    font-size: 13px;
+    color: #3F269D;
+    margin-bottom: 12px;
+}
+
 .tipoUsuario {
     width: 300px;
     max-width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     margin: 12px 0;
 }
 
-.tipoUsuario input {
-    accent-color: #5937DB;
-    cursor: pointer;
+.tipoUsuario input[type="radio"] {
+    display: none;
 }
 
 .tipoUsuario label {
+    width: 130px;
+    height: 42px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     font-size: 14px;
+    font-weight: bold;
+    color: #888;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Links */
-
-a {
-    color: #5937DB;
+.tipoUsuario label span {
+    font-size: 20px;
 }
 
-/* Botão entrar e cadastrar */
+.tipoUsuario input[type="radio"]:checked + label {
+    background: linear-gradient(to right, #643BFF, #3C2399);
+    color: white;
+    border-color: transparent;
+}
+
+.tipoUsuario label:hover {
+    border-color: #643BFF;
+}
+
+/* Botões */
 
 .btn-entrar {
     background: linear-gradient(to right, #643BFF, #3C2399);
@@ -297,8 +346,6 @@ a {
     font-size: 14px;
 }
 
-/* Efeito ao passar o mouse */
-
 .btn-entrar:hover {
     opacity: 0.9;
 }
@@ -307,108 +354,19 @@ a {
     background-color: #f5f3fc;
 }
 
-/* Responsividade */
 
-@media (max-width: 480px) {
-    .cardInfo {
-        padding: 20px 15px;
-        border-radius: 25px;
-    }
+/* ==================================================
+   4. DASHBOARD - TELA INICIAL
+================================================== */
 
-    h1 {
-        font-size: 25px;
-    }
-
-    .campo,
-    .checkbox,
-    .tipoUsuario,
-    .btn-entrar,
-    .btn-cadastrar {
-        width: 100%;
-    }
-}
-
-/*---------TELA INICIAL---------*/
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f4fa;
-    color: #29265f;
-}
-
-.logoMenu img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin-top: 10px;
-}
-
-.navegacao {
-    
-}
-
-.navegacao img {
-    width: 25px;
-    height: 25px;
-}
-
-.sidebar {
-    width: 220px;
-    height: 100vh;
-    background: linear-gradient(160deg, #202052, #4233a1);
-    color: white;
-    padding: 25px 12px;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar h2 {
-    font-size: 24px;
-    margin-bottom: 100px;
-}
-
-.sidebar nav {
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: white;
-    background: #7064ed;
-    padding: 12px;
-    border-radius: 7px;
-    font-size: 13px;
-}
-
-.sidebar a:hover {
-    background: #5841e6;
-}
-
-.sidebar-bottom {
-    margin-top: auto;
-    text-align: center;
-    font-size: 11px;
-}
-
-.sidebar-bottom p {
-    margin-top: 6px;
-}
+/* Área principal */
 
 main {
     margin-left: 220px;
     padding: 20px;
 }
+
+/* Barra superior */
 
 .topbar {
     display: flex;
@@ -445,13 +403,16 @@ main {
     margin-top: 3px;
 }
 
+/* Organização dos cards */
+
 .dashboard-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr 0.8fr;
     gap: 13px;
 }
 
-.card, .hero {
+.card,
+.hero {
     background: white;
     padding: 13px;
     border-radius: 8px;
@@ -463,6 +424,8 @@ main {
     margin-bottom: 12px;
 }
 
+/* Banner principal */
+
 .hero {
     grid-column: 1;
     min-height: 190px;
@@ -471,8 +434,9 @@ main {
     flex-direction: column;
     justify-content: center;
     padding: 20px;
-    background: linear-gradient(90deg, #17132eaa, #17132e44),
-    url("https://www.sintpq.org.br/arquivos/2024/nandoreis.jpg?1734624587990") center/cover;
+    background:
+        linear-gradient(90deg, #17132eaa, #17132e44),
+        url("https://www.sintpq.org.br/arquivos/2024/nandoreis.jpg?1734624587990") center/cover;
 }
 
 .hero span {
@@ -500,10 +464,11 @@ main {
     cursor: pointer;
 }
 
+/* Ingressos */
+
 .ticket {
     grid-column: 2 / 4;
     text-align: center;
-    
 }
 
 .qr {
@@ -512,7 +477,7 @@ main {
     color: black;
 }
 
-.qr img{
+.qr img {
     width: 140px;
     height: 140px;
 }
@@ -534,6 +499,8 @@ main {
 .discount p {
     margin-top: 5px;
 }
+
+/* Próximos eventos */
 
 .upcoming {
     grid-column: 1;
@@ -560,11 +527,14 @@ main {
     font-size: 11px;
 }
 
-.event p, .event small {
+.event p,
+.event small {
     font-size: 9px;
     color: #999;
     margin-top: 4px;
 }
+
+/* Rotas e mapa */
 
 .route {
     grid-column: 2 / 4;
@@ -576,6 +546,8 @@ main {
     border-radius: 10px;
     z-index: 1;
 }
+
+/* Restaurantes */
 
 .restaurants {
     grid-column: 1;
@@ -618,6 +590,8 @@ main {
     margin-top: 5px;
 }
 
+/* Hotéis */
+
 .hotels {
     grid-column: 2;
 }
@@ -636,6 +610,8 @@ main {
     object-fit: cover;
     border-radius: 5px;
 }
+
+/* Cupons */
 
 .coupons {
     grid-column: 3;
@@ -656,29 +632,60 @@ main {
     font-size: 8px;
 }
 
+
+/* ==================================================
+   5. RESPONSIVIDADE - LOGIN E CADASTRO
+================================================== */
+
+@media (max-width: 480px) {
+
+    .cardInfo {
+        padding: 20px 15px;
+        border-radius: 25px;
+    }
+
+    .PapelLoginCadastro h1 {
+        font-size: 25px;
+    }
+
+    .campo,
+    .checkbox,
+    .tipoUsuario,
+    .btn-entrar,
+    .btn-cadastrar {
+        width: 100%;
+    }
+}
+
+
+/* ==================================================
+   6. RESPONSIVIDADE - DASHBOARD
+================================================== */
+
 @media (max-width: 1000px) {
+
     .dashboard-grid {
         grid-template-columns: 1fr 1fr;
     }
 
-    .hero, .upcoming, .restaurants {
-        grid-column: 1;
-    }
-
-    .ticket, .route {
-        grid-column: 2;
-    }
-
+    .hero,
+    .upcoming,
+    .restaurants,
     .hotels {
         grid-column: 1;
     }
 
+    .ticket,
+    .route,
     .coupons {
         grid-column: 2;
     }
 }
 
 @media (max-width: 650px) {
+
+    /* Sidebar */
+
     .sidebar {
         position: relative;
         width: 100%;
@@ -698,6 +705,8 @@ main {
         display: none;
     }
 
+    /* Conteúdo */
+
     main {
         margin-left: 0;
         padding: 12px;
@@ -707,8 +716,13 @@ main {
         grid-template-columns: 1fr;
     }
 
-    .hero, .ticket, .upcoming, .route,
-    .restaurants, .hotels, .coupons {
+    .hero,
+    .ticket,
+    .upcoming,
+    .route,
+    .restaurants,
+    .hotels,
+    .coupons {
         grid-column: 1;
     }
 
@@ -718,6 +732,7 @@ main {
 }
 
 @media (max-width: 380px) {
+
     .items {
         grid-template-columns: 1fr;
     }
