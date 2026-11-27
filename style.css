@@ -660,6 +660,46 @@ a {
     font-size: 8px;
 }
 
+/*PÁGINA DE CUPONS*/
+
+.offCupom {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    background-color: transparent;
+    border: none;
+    width:25%;
+    margin-top: 40px;
+}
+
+.offCupom > div {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.infoOffCupom {
+    background-color: rgb(255, 155, 255);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 3px 10px;
+    text-align: center;
+}
+
+.cuponsDisponíveisUsados {
+    background-color: rgb(255, 155, 255);
+}
+
+.conteudoCupons button.ativo {
+    background-color: rgb(255, 155, 255);
+    color: white;
+}
+
+.conteudoCupons button {
+    cursor: pointer;
+}
 
 /* ==================================================
    5. RESPONSIVIDADE - ESTRUTURA UNIVERSAL

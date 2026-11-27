@@ -7,7 +7,7 @@ const formLogin = document.getElementById('formLogin');
 
 if (formLogin) {
 
-    formLogin.addEventListener('submit', function(event) {
+    formLogin.addEventListener('submit', function (event) {
 
         event.preventDefault();
 
@@ -34,7 +34,7 @@ const formCadastro = document.getElementById('formCadastro');
 
 if (formCadastro) {
 
-    formCadastro.addEventListener('submit', function(event) {
+    formCadastro.addEventListener('submit', function (event) {
 
         event.preventDefault();
 
@@ -70,9 +70,9 @@ if (formCadastro) {
 
 const iconesSenha = document.querySelectorAll('.VerSenha');
 
-iconesSenha.forEach(function(icone) {
+iconesSenha.forEach(function (icone) {
 
-    icone.addEventListener('click', function() {
+    icone.addEventListener('click', function () {
 
         const campoSenha = icone.parentElement.querySelector('input');
 
@@ -101,7 +101,7 @@ const iconeTurista = document.querySelector('.iconeTurista');
 const iconeParceiro = document.querySelector('.iconeParceiro');
 
 // Quando selecionar Turista
-ClienteSelecionado.addEventListener('change', function() {
+ClienteSelecionado.addEventListener('change', function () {
 
     iconeTurista.src = 'img/TuristaAtivo.png';
     iconeParceiro.src = 'img/ParceiroNaoAtivo.png';
@@ -109,9 +109,36 @@ ClienteSelecionado.addEventListener('change', function() {
 });
 
 // Quando selecionar Parceiro
-ParceiroSelecionado.addEventListener('change', function() {
+ParceiroSelecionado.addEventListener('change', function () {
 
     iconeTurista.src = 'img/TuristaNaoAtivo.png';
     iconeParceiro.src = 'img/ParceiroAtivo.png';
+
+});
+
+
+const DisponivelSelecionado = document.getElementById('DisponivelSelecionado');
+const UtilizadoSelecionado = document.getElementById('UtilizadoSelecionado');
+
+const cuponsDisponiveis = document.getElementById('cuponsDisponiveis');
+const cuponsUtilizados = document.getElementById('cuponsUtilizados');
+
+DisponivelSelecionado.addEventListener('click', function () {
+
+    cuponsDisponiveis.style.display = 'grid';
+    cuponsUtilizados.style.display = 'none';
+
+    DisponivelSelecionado.classList.add('ativo');
+    UtilizadoSelecionado.classList.remove('ativo');
+
+});
+
+UtilizadoSelecionado.addEventListener('click', function () {
+
+    cuponsDisponiveis.style.display = 'none';
+    cuponsUtilizados.style.display = 'grid';
+
+    UtilizadoSelecionado.classList.add('ativo');
+    DisponivelSelecionado.classList.remove('ativo');
 
 });
